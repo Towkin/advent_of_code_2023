@@ -56,12 +56,13 @@ fn solve(day: u32, input: &String, output: &mut impl Write) {
     match day {
         1 => solve_and_print_day!(day_1, 1, input, output),
         2 => solve_and_print_day!(day_2, 2, input, output),
+        3 => solve_and_print_day!(day_3, 3, input, output),
         _ => panic!("Could not solve day {}", day),
     };
 }
 
 const MIN_DAY: u32 = 1;
-const MAX_DAY: u32 = 2;
+const MAX_DAY: u32 = 3;
 
 fn read_args() -> (u32, Vec<u32>) {
     let mut args = env::args();
