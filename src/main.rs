@@ -54,17 +54,18 @@ macro_rules! solve_and_print_day {
 
 fn solve(day: u32, input: &String, output: &mut impl Write) {
     match day {
-        1 => solve_and_print_day!(day_1, 1, input, output),
-        2 => solve_and_print_day!(day_2, 2, input, output),
-        3 => solve_and_print_day!(day_3, 3, input, output),
-        4 => solve_and_print_day!(day_4, 4, input, output),
-        5 => solve_and_print_day!(day_5, 5, input, output),
+        1 => solve_and_print_day!(day_1, day, input, output),
+        2 => solve_and_print_day!(day_2, day, input, output),
+        3 => solve_and_print_day!(day_3, day, input, output),
+        4 => solve_and_print_day!(day_4, day, input, output),
+        5 => solve_and_print_day!(day_5, day, input, output),
+        6 => solve_and_print_day!(day_6, day, input, output),
         _ => panic!("Could not solve day {}", day),
     };
 }
 
 const MIN_DAY: u32 = 1;
-const MAX_DAY: u32 = 5;
+const MAX_DAY: u32 = 6;
 
 fn read_args() -> (u32, Vec<u32>) {
     let mut args = env::args();
